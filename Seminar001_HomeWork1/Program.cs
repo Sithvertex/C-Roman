@@ -18,4 +18,4 @@ if( a2 > max ) max = a2;
 Console.Write("Макимальное число:" +max);
 // Вопрос на семинаре, как считать с консоли число, без
 // конвертации:
-//int input = Console.Read();
+//input = int.Parse(Console.ReadLine());
