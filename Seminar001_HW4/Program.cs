@@ -1,10 +1,10 @@
 ﻿Console.Write("Введите любое число  ");
 int input = int.Parse(Console.ReadLine());
 
-int i, j, fk, b, s;
+int i, j, b, s;
 i = 0;
 j = 0;
-fk = 0;
+
 while ( i < input)
 {
     i++;
