@@ -1,6 +1,4 @@
-﻿Console.Write("Введите любое число  ");
-int input = int.Parse(Console.ReadLine());
-
+﻿
 int i, j, b, s;
 i = 0;
 j = 0;
