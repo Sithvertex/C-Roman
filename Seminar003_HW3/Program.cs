@@ -1,9 +1,9 @@
 ﻿// Введение исходных данных
-Console.Write("Введите любое число  ");
+Console.Write("Введите любое N число  ");
 int input = int.Parse(Console.ReadLine());
 
 // Определение временых переменых
-int s, k, f;
+int s, f;
 f = 0;
 s = 0;
 
