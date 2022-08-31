@@ -34,8 +34,8 @@ int countOfRang(int n)
 }
 
 //Определение переменых 
-int start = 1;
-int stop = 1000000;
+int start = 12;
+int stop = 99;
 
 // Задание массива "интересных" чисел
 int[] a = new int[N];
@@ -62,17 +62,21 @@ while(i < N)
     int t1, t2;
     t1= 0;
     t2 =0;
-    for (int j = 0; j <= s; j++)
+    
+    for (int j = 0; j < s; j++)
     {
-        t1 *= b[j];
+        t1 = b[j];
+        t1*=t1;
         t2 += b[j];
     }
-    if (t1%t2 == 0 && input != 0)
+    // Console.WriteLine(t1);
+    //Console.WriteLine(t2);
+    if (t1%t2 == 0 && input != 0 && t2!=0 && t1!=0)
     {
         a[i] = input; //присвоение массиву "интересного числа"
         i++;
     }
-    s=0;
+    s = 0;
 }
 
 PrintArray(a);
