@@ -1,6 +1,6 @@
 ﻿// Введение исходных данных
-Console.Write("Введите любое N число  ");
-int input = int.Parse(Console.ReadLine());
+Console.Write("Введите размерность массива N:");
+int N = int.Parse(Console.ReadLine());
 
 //Функция для вывода массива
 void PrintArray(int[] array)
@@ -13,9 +13,6 @@ void PrintArray(int[] array)
     }
     Console.WriteLine();
 }
-
-int n;
-n = input;
 
 //Функция для определения разрядности числа
 int countOfRang(int n)
@@ -30,47 +27,46 @@ int countOfRang(int n)
     return countOfDigits;
 }
 
-Console.WriteLine(input);
-Console.WriteLine(countOfRang(n));
+//Определение переменых
+int start = 1;
+int stop = 1000000;
 
+// Задание массива "интересных" чисел
+int[] a = new int[N+1];
 
-// //1. 
-// // Input num
-// int num = Convert.ToInt32(Console.ReadLine());
-// //2.
-// // Get number length in digits
-// //2.1
-//     int countOfDigits = 0;
-//     int tmp = num;
-//     while (tmp != 0)
-//     {
-//         tmp = tmp / 10; 
-//         countOfDigits++;
-//     }
-//     //1 15 123
-// //2.2
-//     //countOfDigits = num.ToString().Length;
+int i, s, m, number_1, number_2;
+i = 0;
 
-// //3.
-// //
-// // create array with required size
-//     int[] digits;
-//     digits = new int[countOfDigits];
-// //
+while(i < N)
+{
+    int input = new Random().Next(start,stop+1); 
+    s = countOfRang(input);
+    int[] b = new int[s+1];
+    int number;
+    number = input;
+    // разбиение random числа на числа :)
+    for (int k = 0; k < s; k++)
+    {
+         m = Convert.ToInt32(Math.Pow(10, ((s-k)-1)));
+        number_1 = number / m;
+        number_2 = number % m;
+        b[k] = number_1;
+        number = number_2;
+    }
+    int t1, t2;
+    t1= 0;
+    t2 =0;
+    for (int j = 0; j <= s; j++)
+    {
+        t1 *= b[j];
+        t2 += b[j];
+    }
+    if (t1%t2 == 0 && input != 0)
+    {
+        a[i] = input; //присвоение массиву "интересного числа"
+        i++;
+    }
+    s=0;
+}
 
-// //4.
-// //fill array digits
-//     //123 % 10 -> 3  123/10
-//     //12 % 10 -> 2   12/10
-//     //1 % 10 -> 1   1/10
-//     int i = 0;
-//     tmp = num;
-//     while (tmp != 0)
-//     {
-//         digits[i] = tmp % 10;   
-//         tmp /= 10; 
-//         i++;
-//     }
-
-// //5/
-
+PrintArray(a);
