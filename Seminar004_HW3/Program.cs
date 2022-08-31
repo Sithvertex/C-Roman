@@ -38,7 +38,7 @@ int start = 1;
 int stop = 1000000;
 
 // Задание массива "интересных" чисел
-int[] a = new int[N+1];
+int[] a = new int[N];
 
 int i, s, m, number_1, number_2;
 i = 0;
