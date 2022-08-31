@@ -28,3 +28,44 @@ double z = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow(
 
 //Вывод результата
 Console.WriteLine("Результат равен = {0}", z);
+
+// //1. 
+// // Input num
+// int num = Convert.ToInt32(Console.ReadLine());
+// //2.
+// // Get number length in digits
+// //2.1
+//     int countOfDigits = 0;
+//     int tmp = num;
+//     while (tmp != 0)
+//     {
+//         tmp = tmp / 10; 
+//         countOfDigits++;
+//     }
+//     //1 15 123
+// //2.2
+//     //countOfDigits = num.ToString().Length;
+
+// //3.
+// //
+// // create array with required size
+//     int[] digits;
+//     digits = new int[countOfDigits];
+// //
+
+// //4.
+// //fill array digits
+//     //123 % 10 -> 3  123/10
+//     //12 % 10 -> 2   12/10
+//     //1 % 10 -> 1   1/10
+//     int i = 0;
+//     tmp = num;
+//     while (tmp != 0)
+//     {
+//         digits[i] = tmp % 10;   
+//         tmp /= 10; 
+//         i++;
+//     }
+
+// //5/
+
