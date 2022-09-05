@@ -33,7 +33,7 @@ while(i < N)
     int input = new Random().Next(start,stop+1); 
     b[i] = input;
 
-    if(input % 2 ==0 && i !% 2 == 0)
+    if(input % 2 ==0 && i ! % 2 != 0)
         {
             sum = sum + input;
         }
