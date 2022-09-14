@@ -24,4 +24,4 @@ for(int i=0; i<(N/2); i++)
   count = count + (arr[i]*arr[(N-(i+1))]);      
 }  
 
-Console.WriteLine("Сумма произвед. пар чисел {0}", count);
+C
