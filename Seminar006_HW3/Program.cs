@@ -23,5 +23,3 @@ for(int i=0; i<(N/2); i++)
 {
   count = count + (arr[i]*arr[(N-(i+1))]);      
 }  
-
-C
