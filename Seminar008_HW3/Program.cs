@@ -43,7 +43,7 @@ bool IsinArray(int[,] array, int value)
             if (array[i, j] == value)
             {
                 return true;
-            }     
+            }
     }
     return false;
 }
@@ -53,11 +53,17 @@ for (int i = 0; i < n; i++)
     for (int j = 0; j < m; j++)
     {
         int value = a[i, j];
-        if (IsinArray(a, value) == true)
-        {
-            int tmp = new Random().Next(start, stop + 1);
-            a[i, j] = tmp;
+        while (IsinArray(a, value) != true)
+        {            
+            value = new Random().Next(start, stop + 1);
         }
+
+        // int value = a[i, j];
+        // if (IsinArray(a, value) == true)
+        // {
+        //     int tmp = new Random().Next(start, stop + 1);
+        //     a[i, j] = tmp;
+        // }
     }
 }
 
