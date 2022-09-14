@@ -68,7 +68,7 @@ for (int j=0; j< m; j++)
     {
         temp=temp+a[i,j];
     }
-    b[j] = temp / m;
+    b[j] = temp / n;
 }
 
 PrintArray2(a);
