@@ -16,8 +16,8 @@ string[] tv = t.Split(' ').ToArray();
 int n = int.Parse(tv[0]);
 int m = int.Parse(tv[1]);
 
-int start = 1;
-int stop = 10;
+int start = 10;
+int stop = 99;
 int[,] a = new int[n, m];
 
 //Функция заполнения масива двухмерного масива
@@ -43,27 +43,21 @@ bool IsinArray(int[,] array, int value)
             if (array[i, j] == value)
             {
                 return true;
-            }
-        return false;
+            }     
     }
+    return false;
 }
-
 
 for (int i = 0; i < n; i++)
 {
     for (int j = 0; j < m; j++)
     {
-        tmp = a[i, j];
-        IsinArray(a, tmp);
-        if (IsinArray(a, tmp) == true)
+        int value = a[i, j];
+        if (IsinArray(a, value) == true)
         {
             int tmp = new Random().Next(start, stop + 1);
+            a[i, j] = tmp;
         }
-        else
-        {
-            int tmp = 0;
-        }
-
     }
 }
 
