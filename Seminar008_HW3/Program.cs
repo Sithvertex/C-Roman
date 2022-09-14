@@ -53,19 +53,15 @@ for (int i = 0; i < n; i++)
     for (int j = 0; j < m; j++)
     {
         int value = a[i, j];
+        
         while (IsinArray(a, value) == false)
-        {            
+        {
             value = new Random().Next(start, stop + 1);
         }
-
-        // int value = a[i, j];
-        // if (IsinArray(a, value) == true)
-        // {
-        //     int tmp = new Random().Next(start, stop + 1);
-        //     a[i, j] = tmp;
-        // }
     }
+
 }
+
 
 //Функция для вывода двухмерного массива
 void PrintArray2(int[,] array)
