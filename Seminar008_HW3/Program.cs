@@ -53,7 +53,7 @@ for (int i = 0; i < n; i++)
     for (int j = 0; j < m; j++)
     {
         int value = a[i, j];
-        while (IsinArray(a, value) != true)
+        while (IsinArray(a, value) == false)
         {            
             value = new Random().Next(start, stop + 1);
         }
