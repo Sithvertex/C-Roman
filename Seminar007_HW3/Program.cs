@@ -13,11 +13,11 @@ string[] tv = t.Split(' ').ToArray();
 int n = int.Parse(tv[0]);
 int m = int.Parse(tv[1]);
 
-int start = 1;
+int start = 10;
 int stop = 99;
-int temp;
+double temp;
 int[,] a = new int[n, m];
-int[] b = new int[m];
+double[] b = new double[m];
 
 //Функция заполнения масива двухмерного масива
 void FillArray(int[,] array)
@@ -41,14 +41,14 @@ void PrintArray2(int[,] array)
     {
         for (int j = 0; j < count2; j++)
         {
-            Console.Write($" {array[i,j]},");
+            Console.Write($" {array[i, j]},");
         }
         Console.WriteLine();
     }
 }
 
 //Функция для вывода одномерного массива
-void PrintArray1(int[] array)
+void PrintArray1(double[] array)
 {
     int count = array.Length;
 
@@ -61,12 +61,12 @@ void PrintArray1(int[] array)
 
 FillArray(a);
 
-for (int j=0; j< m; j++)
+for (int j = 0; j < m; j++)
 {
     temp = 0;
-    for (int i=0; i <n; i++)
+    for (int i = 0; i < n; i++)
     {
-        temp=temp+a[i,j];
+        temp = temp + a[i, j];        
     }
     b[j] = temp / n;
 }
