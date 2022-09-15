@@ -17,22 +17,8 @@ int n = int.Parse(tv[0]);
 int m = int.Parse(tv[1]);
 
 int start = 10;
-int stop = 99;
+int stop = 40;
 int[,] a = new int[n, m];
-
-//Функция заполнения масива двухмерного масива
-void FillArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(start, stop + 1);
-        }
-    }
-}
-
-FillArray(a);
 
 //Функция для проверки есть ли это число в двухмерном массиве
 bool IsinArray(int[,] array, int value)
@@ -48,20 +34,18 @@ bool IsinArray(int[,] array, int value)
     return false;
 }
 
-for (int i = 0; i < n; i++)
+for (int i = 0; i < a.GetLength(0); i++)
 {
-    for (int j = 0; j < m; j++)
+    for (int j = 0; j < a.GetLength(1);)
     {
-        int value = a[i, j];
-        
-        while (IsinArray(a, value) == false)
+        int tmp = new Random().Next(start, stop + 1);
+        if (IsinArray(a, tmp) == false)
         {
-            value = new Random().Next(start, stop + 1);
+            a[i, j] = tmp;
+            j++;
         }
     }
-
 }
-
 
 //Функция для вывода двухмерного массива
 void PrintArray2(int[,] array)
@@ -76,9 +60,8 @@ void PrintArray2(int[,] array)
             Console.Write($" {array[i, j]},");
         }
         Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
-
-// Console.WriteLine("Итоговая матрица перемножения");
 PrintArray2(a);

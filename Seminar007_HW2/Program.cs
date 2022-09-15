@@ -50,7 +50,7 @@ void PrintArray(int[,] array)
 }
 
 FillArray(a);
-//PrintArray(a);
+PrintArray(a);
 
 if ( n > (k-1) && m > (l-1))
 {
